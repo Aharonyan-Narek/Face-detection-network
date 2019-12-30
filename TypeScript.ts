@@ -86,3 +86,15 @@ let x = 3;
 
 //Union Type
 let confused: string | number = 'hello'
+
+
+// MIGRATION
+// dotnet ef migrations add InitialCreate -p Persistence/ -s API/
+// dotnet ef migrations add SeedValues -p Persistence/ -s API/
+// dotnet ef migrations add "ActivityEntityAdded" -p Persistence/ -s API/
+
+// API WATCH RUN
+// dotnet watch run
+
+// INSTALL EF
+// dotnet tool install --global dotnet-ef
