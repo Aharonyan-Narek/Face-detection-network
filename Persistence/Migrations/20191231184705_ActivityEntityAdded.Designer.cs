@@ -9,31 +9,38 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20190723081531_ActivityEntityAdded")]
+    [Migration("20191231184705_ActivityEntityAdded")]
     partial class ActivityEntityAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062");
+                .HasAnnotation("ProductVersion", "3.1.0");
 
             modelBuilder.Entity("Domain.Activity", b =>
                 {
                     b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Category");
+                    b.Property<string>("Category")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("City");
+                    b.Property<string>("City")
+                        .HasColumnType("TEXT");
 
-                    b.Property<DateTime>("Date");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Description");
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Title");
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Venue");
+                    b.Property<string>("Venue")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -42,29 +49,31 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Value", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
 
-                    b.Property<string>("Name");
+                    b.Property<string>("Name")
+                        .HasColumnType("TEXT");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.ToTable("Values");
 
                     b.HasData(
                         new
                         {
-                            Id = 1,
+                            id = 1,
                             Name = "Value 101"
                         },
                         new
                         {
-                            Id = 2,
+                            id = 2,
                             Name = "Value 102"
                         },
                         new
                         {
-                            Id = 3,
+                            id = 3,
                             Name = "Value 103"
                         });
                 });

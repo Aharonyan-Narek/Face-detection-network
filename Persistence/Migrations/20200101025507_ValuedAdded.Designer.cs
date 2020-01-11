@@ -9,8 +9,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191229015917_ActivityEntityAdded")]
-    partial class ActivityEntityAdded
+    [Migration("20200101025507_ValuedAdded")]
+    partial class ValuedAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,31 +49,31 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.Value", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.ToTable("Values");
 
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Name = "Value 101"
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Name = "Value 102"
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Name = "Value 103"
                         });
                 });

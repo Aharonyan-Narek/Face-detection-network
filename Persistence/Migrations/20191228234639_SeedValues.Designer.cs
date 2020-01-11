@@ -33,17 +33,17 @@ namespace Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            id = 1,
+                            Id = 1,
                             Name = "Value 101"
                         },
                         new
                         {
-                            id = 2,
+                            Id = 2,
                             Name = "Value 102"
                         },
                         new
                         {
-                            id = 3,
+                            Id = 3,
                             Name = "Value 103"
                         });
                 });

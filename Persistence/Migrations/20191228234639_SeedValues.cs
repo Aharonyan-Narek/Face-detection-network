@@ -8,17 +8,17 @@ namespace Persistence.Migrations
         {
             migrationBuilder.InsertData(
                 table: "Values",
-                columns: new[] { "id", "Name" },
+                columns: new[] { "Id", "Name" },
                 values: new object[] { 1, "Value 101" });
 
             migrationBuilder.InsertData(
                 table: "Values",
-                columns: new[] { "id", "Name" },
+                columns: new[] { "Id", "Name" },
                 values: new object[] { 2, "Value 102" });
 
             migrationBuilder.InsertData(
                 table: "Values",
-                columns: new[] { "id", "Name" },
+                columns: new[] { "Id", "Name" },
                 values: new object[] { 3, "Value 103" });
         }
 
@@ -26,17 +26,17 @@ namespace Persistence.Migrations
         {
             migrationBuilder.DeleteData(
                 table: "Values",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 1);
 
             migrationBuilder.DeleteData(
                 table: "Values",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 2);
 
             migrationBuilder.DeleteData(
                 table: "Values",
-                keyColumn: "id",
+                keyColumn: "Id",
                 keyValue: 3);
         }
     }
